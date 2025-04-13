@@ -46,5 +46,23 @@
   <button onclick="generateGoal()">✨ Give me a goal</button>
   <div class="box" id="goalBox">(One thing, one shift.)</div>
 
-  <script>
-    const goals
+ <script>
+  const goals = [
+    "Block 30 mins this week for uninterrupted focus.",
+    "Give one piece of positive feedback.",
+    "Say no to one unnecessary meeting.",
+    "Move one project 5% forward — not perfect, just started.",
+    "Ask a question you’ve been holding back.",
+    "Rewrite one vague message to be clear and kind.",
+    "Document a tiny process you’ve been doing silently.",
+    "Reflect on one hard moment and what you learned.",
+    "Update one outdated thing you’ve been ignoring.",
+    "Reach out to someone outside your team."
+  ];
+
+  function generateGoal() {
+    const goal = goals[Math.floor(Math.random() * goals.length)];
+    document.getElementById('goalBox').textContent = goal;
+  }
+</script>
+

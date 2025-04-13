@@ -34,3 +34,36 @@
       border-radius: 6px;
       background-color: #b2ccc4;
       color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #9ebeb3;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌱 Micro Win Generator</h1>
+  <button onclick="generateWin()">🎉 Show me a win</button>
+  <div class="box" id="winBox">(Even small steps count.)</div>
+
+  <script>
+    const wins = [
+      "I stayed calm even when it was hard.",
+      "I protected my calendar for deep work.",
+      "I asked for help instead of powering through.",
+      "I gave feedback that mattered.",
+      "I said no to something that didn’t serve me.",
+      "I redirected energy instead of spiraling.",
+      "I took care of something I usually avoid.",
+      "I practiced clarity instead of people-pleasing.",
+      "I took the first step before I felt ready.",
+      "I reminded myself I’m learning — not failing."
+    ];
+
+    function generateWin() {
+      const win = wins[Math.floor(Math.random() * wins.length)];
+      document.getElementById('winBox').textContent = win;
+    }
+  </script>
+</body>
+</html>

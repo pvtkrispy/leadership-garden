@@ -11,6 +11,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
       text-align: center;
       margin: 0;
     }
@@ -43,7 +45,7 @@
 </head>
 <body>
   <h1>🌱 Micro Win Generator</h1>
-  <button onclick="generateWin()">🎉 Show me a win</button>
+  <button id="winBtn">🎉 Show me a win</button>
   <div class="box" id="winBox">(Even small steps count.)</div>
 
   <script>
@@ -60,10 +62,10 @@
       "I reminded myself I’m learning — not failing."
     ];
 
-    function generateWin() {
+    document.getElementById("winBtn").addEventListener("click", () => {
       const win = wins[Math.floor(Math.random() * wins.length)];
-      document.getElementById('winBox').textContent = win;
-    }
+      document.getElementById("winBox").textContent = win;
+    });
   </script>
 </body>
 </html>
